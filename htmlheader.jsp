@@ -1,3 +1,4 @@
+﻿<%@page contentType="text/html;charset=GBK"%>
 <html>
 	<head>
 		<title>Cyendra Online Judge</title>
@@ -5,18 +6,37 @@
 		<link href="/stylesheets/bootstrap.css" rel="stylesheet" type="text/css"/>
 		<link href="/stylesheets/style.css" rel="stylesheet" type="text/css"/>
 	</head>
+	<script  src='js/check_form.js'></script>
 	<body id="wrapper">
 		<div class="w">
 			<marquee style="float:left:width:50%;" id="marquee"onmouseout="this.start()" onmouseover="this.stop()" scrollamount="2" scrolldelay="1" behavior="alternate">
 				<span class="user user-green">cyendra 在线评测系统</span>
 			</marquee>
-			<ul class="navigation">
-				<li><a href="" id="reg">Register</a></li>
-				<li><span class="user-gray">|</span></li>
-				<li><a href="login.jsp" id="login">Enter</a></li>
-			</ul>
-		</div>
-		<div class="w" id="preload_logo">
+			<ul class='navigation'>
+<%	    
+	if(session.getValue("login")==null) {
+		out.print("<li><a href='register.jsp' id='reg'>Register</a></li><li><span class='user-gray'>|</span></li><li><a href='login.jsp' id='login'>Enter</a></li>");
+	}	
+	else {
+		out.print("<li><a href='' id='logout'>Logout</a></li><li><span class='user-gray'>|</span></li><li><a href=''>"+session.getValue("login").toString()+"</a></li>");
+	}	
+%>
+			</ul></div><div class='w' id='preload_logo'>
+<%
+	if(session.getValue("login")==null) {
+		out.print("<a class='fr' target='_blank' href='https://github.com/cyendra/CyOnlineJudge' style='margin-top:5px;'>");
+		out.print("<img class='img_m topic_img' title='Fork me on Github.' alt='Fork me on Github.' src='/img/git.png' />");
+		out.print("</a>");
+	}
+	else {
+		out.print("<a class='fr' href='/avatar' style='margin-top:5px;'>");
+		out.print("<img class='img_m topic_img' title='change picture' alt='change picture' src='/img/avatar/cyendra/3.jpeg' />");
+		out.print("</a>");
+	}
+%>
+			<a class='logo' href='/' title='Cyendra Online Judge'>
+				<img src='/img/logo.jpg' alt='Cyendra Online Judge' />
+			</a>
 		</div>
 		<div class="w">
 			<div class="fr">
@@ -34,14 +54,3 @@
 				<li><a href="/topic">Forum</a></li>
 			</ul>
 		</div>
-		<div class="w" id="xbody">
-		
-		</div>
-		<div class="w" id="footer">
-			<div><a href="/">CyendraOJ v0.0.1</a> All Copyright Reserved ©2014-2015 cyendra</div>
-			<div>Any bug please contact cyendra@foxmail.com</div>
-			<div>Server time: <span   time="1401021239221" id="timer"></span></div>
-			<div>...</div>
-		</div>
-	</body>
-</html>
