@@ -2,7 +2,7 @@
 <%@page import="java.util.*"%>
 <%@include file="htmlheader.jsp"%>
 <div class="w" id="xbody">
-	<center><form action='' method='post' onsubmit='return check_p(this)' >
+	<center><form action='common/getRegister.jsp' method='post' onsubmit='return check_p(this)' >
 		<table style='width:70%'>
 			<tr>
 				<td style='width:30%'>User :</td>

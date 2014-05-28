@@ -14,23 +14,23 @@
 			</marquee>
 			<ul class='navigation'>
 <%	    
-	if(session.getValue("login")==null) {
+	if(session.getAttribute("login")==null) {
 		out.print("<li><a href='register.jsp' id='reg'>Register</a></li><li><span class='user-gray'>|</span></li><li><a href='login.jsp' id='login'>Enter</a></li>");
 	}	
 	else {
-		out.print("<li><a href='' id='logout'>Logout</a></li><li><span class='user-gray'>|</span></li><li><a href=''>"+session.getValue("login").toString()+"</a></li>");
+		out.print("<li><a href='common/logout.jsp' id='logout'>Logout</a></li><li><span class='user-gray'>|</span></li><li><a href=''>"+session.getAttribute("login").toString()+"</a></li>");
 	}	
 %>
 			</ul></div><div class='w' id='preload_logo'>
 <%
-	if(session.getValue("login")==null) {
+	if(session.getAttribute("login")==null) {
 		out.print("<a class='fr' target='_blank' href='https://github.com/cyendra/CyOnlineJudge' style='margin-top:5px;'>");
 		out.print("<img class='img_m topic_img' title='Fork me on Github.' alt='Fork me on Github.' src='/img/git.png' />");
 		out.print("</a>");
 	}
 	else {
 		out.print("<a class='fr' href='/avatar' style='margin-top:5px;'>");
-		out.print("<img class='img_m topic_img' title='change picture' alt='change picture' src='/img/avatar/cyendra/3.jpeg' />");
+		out.print("<img class='img_m topic_img' title='change picture' alt='change picture' src='/img/acm.jpeg' />");
 		out.print("</a>");
 	}
 %>
