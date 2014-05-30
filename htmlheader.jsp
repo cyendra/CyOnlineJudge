@@ -45,7 +45,7 @@
 			</div>
 			<ul class="navigation menu">
 				<li><a href="/">Home</a></li>       	 
-				<li><a href="/problemset">Problemset</a></li>        
+				<li><a href="/problem/problemlist.jsp">Problemset</a></li>        
 				<li><a href="/status">Status</a></li>        
 				<li><a href="/ranklist">Ranklist</a></li>        
 				<li><a href="/contest/1">DIY Contest</a></li>

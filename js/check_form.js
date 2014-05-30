@@ -116,7 +116,7 @@ function check_p(obj){
 	if(check_user(obj)==false){
 		return false;
 	}
-	
+	/*
 	for(i=0;i<obj.password.value.length;i++){
 		c=obj.password.value.charAt(i);
 		if(letter.indexOf(c)<0){
@@ -124,7 +124,7 @@ function check_p(obj){
 			return false;
 		}
 	}
-	
+	*/
 	if(obj.password.value!=obj.repassword.value){
 		alert("password error!");
 		obj.password.value="";
