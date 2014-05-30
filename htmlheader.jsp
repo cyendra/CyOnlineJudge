@@ -46,11 +46,10 @@
 			<ul class="navigation menu">
 				<li><a href="/">Home</a></li>       	 
 				<li><a href="/problem/problemlist.jsp">Problemset</a></li>        
-				<li><a href="/status">Status</a></li>        
-				<li><a href="/ranklist">Ranklist</a></li>        
-				<li><a href="/contest/1">DIY Contest</a></li>
-				<li><a href="/contest/2">VIP Contest</a></li>
-				<li><a href="/topic/100">FAQ</a></li>
-				<li><a href="/topic">Forum</a></li>
+				<li><a href="/">Status</a></li>        
+				<li><a href="/">Ranklist</a></li>        
+				<li><a href="/">Contest</a></li>
+				<li><a href="/">FAQ</a></li>
+				<li><a href="/">Forum</a></li>
 			</ul>
 		</div>

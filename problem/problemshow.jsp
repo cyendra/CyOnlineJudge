@@ -101,9 +101,10 @@ rs.close();
   
 			<h4>Source</h4>
 			<div class="accordion-inner "><%=sourse%></div>
-  
+	
 			<div align="center" style="padding-bottom: 20px;">
-				<a class="uibtn checklogin" href="javascript:;" pid="1000" id="gotosubmit">Submit</a><a class="uibtn" href="/statistic/1000">Statistic</a>
+				<% String suburl="'/problem/submit.jsp?id="+proId+"'"; %>
+				<a class="uibtn checklogin" href=<%=suburl%> pid="" id="gotosubmit">Submit</a><a class="uibtn" href="/">Statistic</a>
 			</div>
 		</div>
 	</div>
