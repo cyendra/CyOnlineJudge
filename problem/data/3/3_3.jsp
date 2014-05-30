@@ -1,0 +1,1 @@
+Output the result of a + b in a single line.

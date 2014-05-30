@@ -1,6 +1,6 @@
 <%@page language="java" contentType="text/html;charset=GBK"%>
 <%@page import="java.util.*"%>
-<%@include file="../htmlheader.jsp"%>
+<%@include file="/htmlheader.jsp"%>
 <%@page import="java.sql.*"%>
 <jsp:useBean id="conn" class="db.dbConn" scope="page"/>
 <div class="w"  id="xbody">
@@ -14,7 +14,6 @@
 				<ul>
 					<li class="disabled"><a id="1" href="problemlist.jsp?list=0">&lt;&lt;</a></li>
 				<%
-
 					int listid=0,totalnub=0;
 					if (request.getParameter("list")!=null) listid=Integer.parseInt(request.getParameter("list"));
 					ResultSet rs = conn.executeQuery("select count(*) from problem");
@@ -31,22 +30,6 @@
 				%>
 				</ul>
 			</div>
-		    <div class="fr" id="filter">
-			
-				<div class="input-prepend">
-					<span class="add-on"><i class="icon-search"></i></span>
-					<input type="text" id="search" style="width:160px;"  title="Title or Tag or Source" placeholder=" title or tag or source">
-				</div>
-				
-				<div>
-					<a class="uibtn uibtn-mini" href="" id="fil">Filter</a>
-				</div>
-				<div>
-					<a class="uibtn uibtn-mini" href="" id="reset">Reset</a>
-				</div>
-				
-			</div>
-			
 			<div id="tablediv">
 			
 				<table class="table table-cf" style="table-layout:fixed;" id="problemset">
@@ -108,4 +91,4 @@
 
 </div>
 
-<%@include file="../htmlfooter.jsp"%>
+<%@include file="/htmlfooter.jsp"%>
