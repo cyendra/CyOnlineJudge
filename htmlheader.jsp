@@ -6,7 +6,7 @@
 		<link href="/stylesheets/bootstrap.css" rel="stylesheet" type="text/css"/>
 		<link href="/stylesheets/style.css" rel="stylesheet" type="text/css"/>
 	</head>
-	<script  src='js/check_form.js'></script>
+	<script  src='/js/check_form.js'></script>
 	<body id="wrapper">
 		<div class="w">
 			<marquee style="float:left:width:50%;" id="marquee"onmouseout="this.start()" onmouseover="this.stop()" scrollamount="2" scrolldelay="1" behavior="alternate">
@@ -15,10 +15,10 @@
 			<ul class='navigation'>
 <%	    
 	if(session.getAttribute("login")==null) {
-		out.print("<li><a href='register.jsp' id='reg'>Register</a></li><li><span class='user-gray'>|</span></li><li><a href='login.jsp' id='login'>Enter</a></li>");
+		out.print("<li><a href='/register.jsp' id='reg'>Register</a></li><li><span class='user-gray'>|</span></li><li><a href='/login.jsp' id='login'>Enter</a></li>");
 	}	
 	else {
-		out.print("<li><a href='common/logout.jsp' id='logout'>Logout</a></li><li><span class='user-gray'>|</span></li><li><a href=''>"+session.getAttribute("login").toString()+"</a></li>");
+		out.print("<li><a href='/common/logout.jsp' id='logout'>Logout</a></li><li><span class='user-gray'>|</span></li><li><a href='/common/updateinfo.jsp'>"+session.getAttribute("login").toString()+"</a></li>");
 	}	
 %>
 			</ul></div><div class='w' id='preload_logo'>
