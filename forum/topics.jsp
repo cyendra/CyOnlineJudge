@@ -32,7 +32,7 @@
 			</div>
 			<div class="fr" id="filter">
 				<div>
-					<a href="" class="uibtn uibtn-mini checklogin" id="addtopic">发布话题</a>
+					<a href="/forum/addtopic.jsp" class="uibtn uibtn-mini checklogin" id="addtopic">发布话题</a>
 				</div>
 			</div>
 		</div>

@@ -37,5 +37,5 @@
 		session.setAttribute("login", user_id);
 	}
 	
-	response.sendRedirect("../index.jsp");
+	response.sendRedirect("/index.jsp");
 %>
