@@ -12,7 +12,7 @@
 		<div id="pager">
 			<div id="list" class="pagination pagination-small fl">
 				<ul>
-					<li class="disabled"><a id="1" href="problemlist.jsp?list=0">&lt;&lt;</a></li>
+					<li class="disabled"><a id="1" href="/problem/problemlist.jsp?list=0">&lt;&lt;</a></li>
 				<%
 					int listid=0,totalnub=0;
 					if (request.getParameter("list")!=null) listid=Integer.parseInt(request.getParameter("list"));
@@ -23,10 +23,10 @@
 					}
 					//out.println("totalnub="+totalnub);
 					for(int i=0;i<=totalnub/20;i++){
-						if (i!=listid) out.println("<li><a id="+(i+1)+" href='problemlist.jsp?list="+i+"'>"+(i+1)+"</a></li>");
-						else out.println("<li class='active'><a id="+(i+1)+" href='problemlist.jsp?list="+i+"'>"+(i+1)+"</a></li>");
+						if (i!=listid) out.println("<li><a id="+(i+1)+" href='/problem/problemlist.jsp?list="+i+"'>"+(i+1)+"</a></li>");
+						else out.println("<li class='active'><a id="+(i+1)+" href='/problem/problemlist.jsp?list="+i+"'>"+(i+1)+"</a></li>");
 					}
-					out.println("<li><a id="+(totalnub/20+1)+" href='problemlist.jsp?list="+totalnub/20+"'>"+"&gt;&gt;"+"</a></li>");
+					out.println("<li><a id="+(totalnub/20+1)+" href='/problem/problemlist.jsp?list="+totalnub/20+"'>"+"&gt;&gt;"+"</a></li>");
 				%>
 				</ul>
 			</div>

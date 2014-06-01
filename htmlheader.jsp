@@ -50,6 +50,6 @@
 				<li><a href="/board/ranklist.jsp">Ranklist</a></li>        
 				<li><a href="/">Contest</a></li>
 				<li><a href="/">FAQ</a></li>
-				<li><a href="/">Forum</a></li>
+				<li><a href="/forum/topics.jsp">Forum</a></li>
 			</ul>
 		</div>
