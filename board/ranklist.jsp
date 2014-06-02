@@ -1,4 +1,4 @@
-<%@page language="java" contentType="text/html;charset=GBK"%>
+<%@page language="java" contentType="text/html;charset=UTF-8"%>
 <%@page import="java.util.*"%>
 <%@include file="/htmlheader.jsp"%>
 <%@page import="java.sql.*"%>
@@ -6,7 +6,7 @@
 <div class="w" id="xbody">
 
 <fieldset id="ranklist" >
-	<div><legend>еецШ</legend></div>
+	<div><legend>Ф▌▓Е░█</legend></div>
 		<div class="tablebg">
 			<div id="pager">
 				<div id="list" class="pagination pagination-small fl">

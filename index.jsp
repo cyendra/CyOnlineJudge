@@ -1,4 +1,4 @@
-<%@page language="java" contentType="text/html;charset=GBK"%>
+<%@page language="java" contentType="text/html;charset=UTF-8"%>
 <%@page import="java.util.*"%>
 <%@include file="/htmlheader.jsp"%>
 <%@page import="java.sql.*"%>
@@ -6,13 +6,13 @@
 <div class="w" id="xbody">
 	<fieldset>
 		<div>
-			<legend>主页</legend>
+			<legend>涓婚〉</legend>
 		</div>
 		<div class="row-fluid">
 			<div class="span6 publish_box">
 				<div class="publish_header">
-					<a href="" title="更多" class="fr more"></a>
-					<div>公告</div>
+					<a href="" title="鏇村" class="fr more"></a>
+					<div>鍏憡</div>
 				</div>
 				<div class="inner_topic">
 					<ul class="publish_list">

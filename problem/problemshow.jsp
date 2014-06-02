@@ -1,4 +1,4 @@
-<%@page language="java" contentType="text/html;charset=GBK"%>
+<%@page language="java" contentType="text/html;charset=UTF-8"%>
 <%@page import="java.util.*"%>
 <%@include file="../htmlheader.jsp"%>
 <%@page import="java.sql.*"%>
@@ -40,11 +40,11 @@ rs.close();
 %>
 <div class="w"  id="xbody">
 <fieldset>
-	<div><legend>ÄÚÈÝ</legend></div>
+	<div><legend>å†…å®¹</legend></div>
 	<div class="thumbnail" style="padding:1em;"> 
 		<div id="sidebar" pid="">
 			<div class="sidebox">
-				<div class="side-header">¡ú Information</div>
+				<div class="side-header">â†’ Information</div>
 					<ul class="info">
 					<li><span class="user user-gray">How Easy ?</span></li>
 					<li>

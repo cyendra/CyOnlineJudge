@@ -1,4 +1,4 @@
-<%@page language="java" contentType="text/html;charset=GBK"%>
+<%@page language="java" contentType="text/html;charset=UTF-8"%>
 <%@include file="/htmlheader.jsp"%>
 <%
 	int proId = 1;
@@ -9,7 +9,7 @@
 <div class="w" id="xbody">
 <fieldset>
 	<div class="form-horizontal">
-    <div><legend>´úÂëÌá½»</legend></div>
+    <div><legend>ä»£ç æäº¤</legend></div>
     <div class="control-group">
 		<label class="control-label" for="pid">Problem:</label>
 		<div class="controls">

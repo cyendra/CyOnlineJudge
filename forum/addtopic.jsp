@@ -25,13 +25,13 @@
 	<form action='<%=url%>' method=post>
 	<table>
 		<tr>
-			<td>±êÌâ£º<input type=text name=title id="Title" class="input-xxlarge" placeholder="ÇëÔÚ´ËÊäÈë±êÌâ"></td>				
+			<td>æ ‡é¢˜ï¼š<input type=text name=title id="Title" class="input-xxlarge" placeholder="è¯·åœ¨æ­¤è¾“å…¥æ ‡é¢˜"></td>				
 		</tr>
 		<tr>
-			<td>ÄÚÈÝ£º<textarea style= 'width:530px;height:220px '  name=content></textarea></td>
+			<td>å†…å®¹ï¼š<textarea style= 'width:530px;height:220px '  name=content></textarea></td>
 		</tr>
 		<tr>
-			<td><center><input type=submit value="·¢²¼"></center></td>
+			<td><center><input type=submit value="å‘å¸ƒ"></center></td>
 		</tr>
 	</table>
 	</form>

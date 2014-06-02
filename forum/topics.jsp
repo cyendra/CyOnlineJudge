@@ -1,4 +1,4 @@
-<%@page language="java" contentType="text/html;charset=GBK"%>
+<%@page language="java" contentType="text/html;charset=UTF-8"%>
 <%@page import="java.util.*"%>
 <%@include file="/htmlheader.jsp"%>
 <%@page import="java.sql.*"%>
@@ -7,7 +7,7 @@
 
 <fieldset>
 	<div>
-		<legend id="topic">论坛</legend>
+		<legend id="topic">璁哄潧</legend>
 	</div>
 	<div class="tablebg">
 		<div id="pager">
@@ -32,7 +32,7 @@
 			</div>
 			<div class="fr" id="filter">
 				<div>
-					<a href="/forum/addtopic.jsp" class="uibtn uibtn-mini checklogin" id="addtopic">发布话题</a>
+					<a href="/forum/addtopic.jsp" class="uibtn uibtn-mini checklogin" id="addtopic">鍙戝竷璇濋</a>
 				</div>
 			</div>
 		</div>
@@ -41,8 +41,8 @@
 				<thead>
 					<tr>
 						<th style="width:60px;"></th>
-						<th style="width:100px;">回复</th>
-						<th style="text-align:left;">标题</th>
+						<th style="width:100px;">鍥炲</th>
+						<th style="text-align:left;">鏍囬</th>
 						<th style="text-align:right;width:160px"></th>
 					</tr>
 				</thead>

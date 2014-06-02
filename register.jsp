@@ -1,4 +1,4 @@
-<%@page language="java" contentType="text/html;charset=GBK"%>
+<%@page language="java" contentType="text/html;charset=UTF-8"%>
 <%@page import="java.util.*"%>
 <%@include file="htmlheader.jsp"%>
 <div class="w" id="xbody">
@@ -30,7 +30,7 @@
 			</tr>
 			<tr>
 				<td><img id='pic' border=0 src='Num.jsp' onclick='return chk_image();' alt='30'></td>
-				<td><input type='text' name='checknum'>��������ͼƬ</td>
+				<td><input type='text' name='checknum'>看不清点击图片</td>
 			</tr>
 			<tr>
 				<td colspan='2' >

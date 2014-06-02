@@ -1,10 +1,12 @@
-<%@page language="java" contentType="text/html;charset=GBK"%>
+<%@page language="java" contentType="text/html;charset=UTF-8"%>
 <%@page import="java.util.*"%>
 <%@include file="/htmlheader.jsp"%>
 <%@page import="java.sql.*"%>
 <jsp:useBean id="conn" class="db.dbConn" scope="page"/>
 <div class="w" id="xbody">
 <%
+	request.setCharacterEncoding("UTF-8");
+	response.setCharacterEncoding("UTF-8");
 	int post_id=0;
 	String lz_user_id="", lz_date="", lz_time="";
 	String title="",text="";
@@ -26,12 +28,12 @@
 %>
 <fieldset>
 	<div>
-		<legend id="onetopic" tid="1261">ÂÛÌ³</legend>
+		<legend id="onetopic" tid="1261">è®ºå›</legend>
 	</div>
 	<div class="content">
 		<div class="topic_box">
 			<div class="header">
-				<a href="/forum/topics.jsp">ÂÛÌ³Ö÷Ò³</a>>>»°ÌâÏêÇé
+				<a href="/forum/topics.jsp">è®ºå›ä¸»é¡µ</a>>>è¯é¢˜è¯¦æƒ…
 			</div>
 			<div class="inner_topic">
 				<h3>
@@ -41,13 +43,50 @@
 					<%=title%>
 				</h3>
 				<hr />
-				<%=text%>
+				<pre><%=text%></pre>
 				<hr />
 				<span class="user-gray"><%=topicdate%></span> 
 			</div>
 		</div>
+		
+		<%
+			int line = 1;
+			while (rs.next()) {
+				String name = rs.getString("user_id");
+				String ldate = rs.getDate("time").toString() + " " +rs.getTime("time").toString();
+				String retopic = rs.getString("topic");
+				String retext = rs.getString("body");
+				out.println("<div class='reply_area'>");
+				out.println("<div class='reply_avatar'><a href=''><img class='img_s topic_img' title='' alt='' src='/img/acm.jpeg' /></a></div>");
+				out.println("<div class='reply_right'>");
+				out.println("<div><a href='' title='Expert' class='user user-blue'>"+name+"</a><span class='user-gray fr'>#"+line+"</span></div>");
+				out.println("<div class='reply_content'><pre>"+retext+"</pre></div>");
+				out.println("<div class='reply_foot'><span class='user-gray'>"+ldate+"</span></div>");
+				out.println("</div>");
+				out.println("</div>");
+				line++;
+			}
+		%>
+		
+		<div class="topic_box form-horizontal" style="min-height:400px;">
+			<div class="header">æ·»åŠ å›å¤</div>
+			<div class="inner_topic">
+			<%
+				String url_1="/forum/gettopic.jsp";
+				String url_2="";
+				if (request.getParameter("id")!=null) {
+					url_2="?id="+Integer.parseInt(request.getParameter("id"));
+				}
+				String url=url_1+url_2;
+			%>
+			<form action='<%=url%>' method=post>
+				<textarea name=content style= 'width:530px;height:220px '></textarea>
+				<div><input type=submit value="å›å¤"></div>
+			</form>
+			</div>
+		</div>
+		
 	</div>
-
 </fieldset>
 
 </div>

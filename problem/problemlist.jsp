@@ -1,4 +1,4 @@
-<%@page language="java" contentType="text/html;charset=GBK"%>
+<%@page language="java" contentType="text/html;charset=UTF-8"%>
 <%@page import="java.util.*"%>
 <%@include file="/htmlheader.jsp"%>
 <%@page import="java.sql.*"%>
@@ -6,7 +6,7 @@
 <div class="w"  id="xbody">
 
 <fieldset>
-	<div><legend>题库</legend></div>
+	<div><legend>棰樺簱</legend></div>
 	
 	<div class="tablebg">
 		<div id="pager">
@@ -72,7 +72,7 @@
 				<!--
 					<tr class='odd'>
 					<td class='center undefined'>1000</td>
-					<td><div title='水题' class='bgstar mc'><span title='水题' class='star' style='width:80px;'></span></div></td>
+					<td><div title='姘撮' class='bgstar mc'><span title='姘撮' class='star' style='width:80px;'></span></div></td>
 					<td><a href=''>A + B Problem</a></td>
 					<td><span class='act-item'><a id='' class='checklogin' href='' pid='1000'><img src='/img/submit.png' title='Submit' alt='submit'/></a></span></td>
 					<td class='ellipsis'><a href='' style='font-size:12px;' class='tag' title=''>ACdream</a></td>

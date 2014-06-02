@@ -1,4 +1,4 @@
-<%@page contentType="text/html;charset=GBK"%>
+<%@page contentType="text/html;charset=UTF-8"%>
 		<div class="w" id="footer">
 			<div><a href="/">CyendraOJ v0.0.1</a></div>
 			<div>Any bug please contact cyendra@foxmail.com</div>
