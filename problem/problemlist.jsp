@@ -63,7 +63,7 @@
 						else out.println("<tr class='even'>");
 						out.println("<td class='center undefined'>"+rs.getInt("problem_id")+"</td>");
 						out.println("<td><div title='' class='bgstar mc'><span title='' class='star' style='width:80px;'>"+rs.getInt("diff")+"</span></div></td>");
-						out.println("<td><a href='problemshow.jsp?id="+rs.getInt("problem_id")+"'>"+rs.getString("title")+"</a></td>");
+						out.println("<td><a href='/problem/problemshow.jsp?id="+rs.getInt("problem_id")+"'>"+rs.getString("title")+"</a></td>");
 						out.println("<td><span class='act-item'><a id='' class='checklogin' href='' pid=''><img src='/img/submit.png' title='Submit' alt='submit'/></a></span></td>");
 						out.println("<td class='ellipsis'><a href='' style='font-size:12px;' class='tag' title=''>"+rs.getString("sourse")+"</a></td>");
 						int ac=rs.getInt("accepted");
