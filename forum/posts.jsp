@@ -55,7 +55,7 @@
 				String name = rs.getString("user_id");
 				String ldate = rs.getDate("time").toString() + " " +rs.getTime("time").toString();
 				String retopic = rs.getString("topic");
-				// String retext = new String(rs.getString("body").getBytes("ISO-8859-1"),"UTF-8");
+				//String retext = new String(rs.getString("body").getBytes("ISO-8859-1"),"UTF-8");
 				String retext = rs.getString("body");
 				out.println("<div class='reply_area'>");
 				out.println("<div class='reply_avatar'><a href=''><img class='img_s topic_img' title='' alt='' src='/img/acm.jpeg' /></a></div>");

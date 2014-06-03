@@ -47,8 +47,9 @@
 		conn.executeUpdate("update forumtopics set last_time='"+dateTime+"', number=number+1 where forum_id="+topic_id);
 	}
 	que="insert into forumdata (forum_id, user_id, topic, body, time) values("+topic_id+", '"+user_id+"', '"+title+"', '"+text+"', '"+dateTime+"')";
+	String newque = new String(que.getBytes("ISO-8859-1"),"ISO-8859-1");
 	conn.executeUpdate(que);
-	//out.println(que);
-	if (istopic) response.sendRedirect("/forum/topics.jsp");
-	else response.sendRedirect("/forum/posts.jsp?id="+topic_id);
+	out.println(que);
+	//if (istopic) response.sendRedirect("/forum/topics.jsp");
+	//else response.sendRedirect("/forum/posts.jsp?id="+topic_id);
 %>

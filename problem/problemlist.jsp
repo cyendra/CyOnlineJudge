@@ -30,6 +30,14 @@
 				%>
 				</ul>
 			</div>
+			
+			<%
+				if (session.getAttribute("admin")!=null) {
+					out.println("<div class='fr' id='filter'><div><a class='uibtn uibtn-mini' href='/admin/addproblem.jsp' id='fil'>Add Problem</a></div></div>");
+				}
+			%>
+			 
+	  
 			<div id="tablediv">
 			
 				<table class="table table-cf" style="table-layout:fixed;" id="problemset">

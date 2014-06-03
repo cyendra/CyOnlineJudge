@@ -27,7 +27,7 @@
 				privilege=rs.getInt("privilege");
 			}
 			rs.close();
-			if(privilege>=6)session.setAttribute("admin", user_id);
+			if(privilege>=6) session.setAttribute("admin", user_id);
 					
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
