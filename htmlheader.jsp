@@ -48,7 +48,7 @@
 				<li><a href="/problem/problemlist.jsp">Problemset</a></li>        
 				<li><a href="/board/status.jsp">Status</a></li>        
 				<li><a href="/board/ranklist.jsp">Ranklist</a></li>        
-				<li><a href="/">Contest</a></li>
+				<li><a href="/contest/contest.jsp">Contest</a></li>
 				<li><a href="/board/faq.jsp">FAQ</a></li>
 				<li><a href="/forum/topics.jsp">Forum</a></li>
 			</ul>

@@ -37,11 +37,9 @@
 				}
 			%>
 			 
-	  
-			<div id="tablediv">
-			
-				<table class="table table-cf" style="table-layout:fixed;" id="problemset">
-				
+		</div>
+		<div id="tablediv">		
+			<table class="table table-cf" style="table-layout:fixed;" id="problemset">	
 				<thead>
 					<tr>
 						<th style="width:65px;">#</th>
@@ -87,14 +85,10 @@
 					<td class='center'>60.42%(<a href=''>261</a>/<a href=''>432</a>)</td>
 					</tr>
         					-->
-				</tbody>
-				
-				</table>
-			</div>
-			
-		</div>
+				</tbody>	
+			</table>
+		</div>		
 	</div>
-	
 </fieldset>
 
 </div>
