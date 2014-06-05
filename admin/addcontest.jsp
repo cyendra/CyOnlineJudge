@@ -53,32 +53,56 @@
 					</tr>
 				</table>
 			</div>
+			<% String test="asdf"; %>
+<script type="text/javascript">
+var num = 1
+function delRow(obj) {
+	var row = obj.parentNode.parentNode;
+	var tb = row.parentNode; //当前表格
+	var rowIndex = row.rowIndex; //A标签所在行下标
+    tb.deleteRow(rowIndex); //删除当前行
+	num-=1
+	//alert(num);
+	for (var i=1; i<num; i++) {
+		var x=document.getElementById('addprob').rows[i]
+		//alert(x.innerHTML);
+		var cl = x.cells[3];
+		//alert(cl.innerHTML);
+		cl.innerHTML=i
+	}
+}
+function insRow() {
+	var x=document.getElementById('addprob').insertRow(num)
+	var y0=x.insertCell(0)
+	var y1=x.insertCell(1)
+	var y2=x.insertCell(2)
+	var y3=x.insertCell(3)
+	var y4=x.insertCell(4)
+	y0.innerHTML="<input type='button' href='' value='Delete' onclick='delRow(this)'/>"
+	y1.innerHTML="<input type='text' class='probnum input-mini' value=''/>"
+	y2.innerHTML="<input type='text' class='alias input-medium' value=''/>"
+	y3.innerHTML=num
+	y4.innerHTML="<%=test%>"
+	num=num+1
+}
+
+</script>
 			<div class="span6">
 				<table id="addprob" class="table table-condensed tdcenter">
 				<tr>
 					<th style="width:5%;">
-						<input type="button" href="" value="Add"/>
+						<input type="button" href="" value="  Add  " onclick="insRow()"/>
 					</th>
 					<th style="width:20%;">ProbNum</th>
 					<th style="width:30%;">Alias</th>
 					<th style="width:5%;"></th>
 					<th style="text-align:left;">Title</th>
 				</tr>
-				<tr>
-					<td>
-						<input type="button" href="" value="Delete"/>
-					</td>
-					<td><input type="text" class="probnum input-mini" value=""  /></td>
-					<td><input type="text" class="alias input-medium" value="" /></td>
-					<td class="bold p_index">A</td>
-					<td class="error-text title" style="text-align:left;"></td>
-				</tr>
-        
 				</table>
 			</div>
 		</div>
 		<div class="form-actions">
-			<a style="margin-left:50%;" class="uibtn" href="javascript:;" id="submit">Submit</a>
+			<a style="margin-left:50%;" class="uibtn" href="" id="submit">Submit</a>
 			<span id="err" class="error-text"></span>
 		</div>
 	</div>
