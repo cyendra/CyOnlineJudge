@@ -8,6 +8,7 @@
 	<div>
 		<legend id="addcontest">Add Contes</legend>
 	</div>
+	<form  action='' method='post'>
 	<div class="form-horizontal" id="form">
 		<div class="row-fluid" style="min-height:460px;">
 			<div class="span6">
@@ -78,6 +79,7 @@ function insRow() {
 	var y2=x.insertCell(2)
 	var y3=x.insertCell(3)
 	var y4=x.insertCell(4)
+	
 	y0.innerHTML="<input type='button' href='' value='Delete' onclick='delRow(this)'/>"
 	y1.innerHTML="<input type='text' class='probnum input-mini' value=''/>"
 	y2.innerHTML="<input type='text' class='alias input-medium' value=''/>"
@@ -102,11 +104,10 @@ function insRow() {
 			</div>
 		</div>
 		<div class="form-actions">
-			<a style="margin-left:50%;" class="uibtn" href="" id="submit">Submit</a>
-			<span id="err" class="error-text"></span>
+			<input type=submit value='submit'>
 		</div>
 	</div>
-	
+	</form>
 </fieldset>
 </div>
 <%@include file="/htmlfooter.jsp"%>
