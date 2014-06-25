@@ -1,4 +1,8 @@
 <%@page contentType="text/html;charset=UTF-8"%>
+<%@page import="java.sql.*"%>
+<%@page import="db.dbConn"%>
+
+
 <html>
 	<head>
 		<title>Cyendra Online Judge</title>
@@ -14,6 +18,20 @@
 			</marquee>
 			<ul class='navigation'>
 <%	    
+
+			String pic = "/img/acm.jpeg";
+			if (session.getAttribute("login")!=null){
+				String user_id = ""+session.getAttribute("login");
+				String que = "select * from photo";
+				dbConn conn = new dbConn();
+				conn.executeQuery(que);
+				ResultSet rs = conn.executeQuery("select * from temp where user_id='"+user_id+"'");
+				if (rs.next()) {
+					pic = "/img/avatar/"+rs.getString("name");
+				}
+		
+			}
+
 	if(session.getAttribute("login")==null) {
 		out.print("<li><a href='/register.jsp' id='reg'>Register</a></li><li><span class='user-gray'>|</span></li><li><a href='/login.jsp' id='login'>Enter</a></li>");
 	}	
@@ -29,8 +47,8 @@
 		out.print("</a>");
 	}
 	else {
-		out.print("<a class='fr' href='/avatar' style='margin-top:5px;'>");
-		out.print("<img class='img_m topic_img' title='change picture' alt='change picture' src='/img/acm.jpeg' />");
+		out.print("<a class='fr' href='/common/image.jsp' style='margin-top:5px;'>");
+		out.print("<img class='img_m topic_img' title='change picture' alt='change picture' src='"+pic+"' />");
 		out.print("</a>");
 	}
 %>

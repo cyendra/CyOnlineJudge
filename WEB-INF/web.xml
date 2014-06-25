@@ -9,9 +9,21 @@
   version="3.1"
   metadata-complete="true">
  
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ImgServlet</servlet-name>
+    <servlet-class>img.ImgServlet</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>ImgServlet</servlet-name>
+    <url-pattern>/ImgServlet</url-pattern>
+  </servlet-mapping>
   <display-name>Welcome to Tomcat</display-name>
   <description>
      Welcome to Tomcat
   </description>
 
+  
+  
 </web-app>
