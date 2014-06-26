@@ -25,6 +25,17 @@
 		text = rs.getString("body");
 	}
 	String topicdate=lz_date+" "+lz_time;
+
+	String que3 = "select * from photo where user_id='"+lz_user_id+"'";
+	dbConn conn3 = new dbConn();
+	ResultSet rs3 = conn3.executeQuery(que3);
+	String pic3;
+	if (rs3.next()) {
+		pic3 = "/img/avatar/"+rs3.getString("name");
+	}
+	else {
+		pic3 = "/img/acm.jpeg";
+	}
 %>
 <fieldset>
 	<div>
@@ -38,7 +49,7 @@
 			<div class="inner_topic">
 				<h3>
 					<a class="user" href="">
-						<img class="img_m topic_img" title="" alt='<%=lz_user_id%>' src="/img/acm.jpeg"/>
+						<img class="img_m topic_img" title="" alt='<%=lz_user_id%>' src='<%=pic3%>'/>
 					</a>
 					<%=title%>
 				</h3>
@@ -57,8 +68,20 @@
 				String retopic = rs.getString("topic");
 				//String retext = new String(rs.getString("body").getBytes("ISO-8859-1"),"UTF-8");
 				String retext = rs.getString("body");
+				
+				String que4 = "select * from photo where user_id='"+name+"'";
+				dbConn conn4 = new dbConn();
+				ResultSet rs4 = conn4.executeQuery(que4);
+				String pic4;
+				if (rs4.next()) {		
+					pic4 = "/img/avatar/"+rs4.getString("name");
+				}
+				else {
+					pic4 = "/img/acm.jpeg";
+				}
+				
 				out.println("<div class='reply_area'>");
-				out.println("<div class='reply_avatar'><a href=''><img class='img_s topic_img' title='' alt='' src='/img/acm.jpeg' /></a></div>");
+				out.println("<div class='reply_avatar'><a href=''><img class='img_s topic_img' title='' alt='' src='"+pic4+"' /></a></div>");
 				out.println("<div class='reply_right'>");
 				out.println("<div><a href='' title='Expert' class='user user-blue'>"+name+"</a><span class='user-gray fr'>#"+line+"</span></div>");
 				out.println("<div class='reply_content'><pre>"+retext+"</pre></div>");

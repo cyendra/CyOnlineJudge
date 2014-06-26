@@ -50,6 +50,6 @@
 	String newque = new String(que.getBytes("ISO-8859-1"),"ISO-8859-1");
 	conn.executeUpdate(que);
 	out.println(que);
-	//if (istopic) response.sendRedirect("/forum/topics.jsp");
-	//else response.sendRedirect("/forum/posts.jsp?id="+topic_id);
+	if (istopic) response.sendRedirect("/forum/topics.jsp");
+	else response.sendRedirect("/forum/posts.jsp?id="+topic_id);
 %>

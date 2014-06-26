@@ -53,8 +53,22 @@
 					rs = conn.executeQuery(que);
 					int line=1;
 					while(rs.next()){
+						String sid = rs.getString("user_id");
+						String pic2 = "/img/acm.jpeg";
+					
+						String que2 = "select * from photo where user_id='"+sid+"'";
+						dbConn conn2 = new dbConn();
+						ResultSet rs2 = conn2.executeQuery(que2);
+						if (rs2.next()) {
+							pic2 = "/img/avatar/"+rs2.getString("name");
+						}
+						else {
+							pic2 = "/img/acm.jpeg";
+						}
+						
+				
 						out.println("<tr>");
-						out.println("<td><a href=''><img class='img_s topic_img' title='"+rs.getString("user_id")+"' alt='"+rs.getString("user_id")+"' src='/img/acm.jpeg' /></a></td>");
+						out.println("<td><a href=''><img class='img_s topic_img' title='"+rs.getString("user_id")+"' alt='"+rs.getString("user_id")+"' src='"+pic2+"' /></a></td>");
 						out.println("<td><span class='user-green'>"+rs.getInt("number")+"</td>");
 						out.println("<td style='text-align:left;' class='ellipsis'><a href='/forum/posts.jsp?id="+rs.getInt("forum_id")+"'>"+rs.getString("topic")+"</a></td>");
 						out.println("<td><span>"+rs.getDate("last_time")+"  "+rs.getTime("last_time")+"</span></td>");

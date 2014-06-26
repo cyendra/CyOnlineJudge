@@ -22,14 +22,19 @@
 			String pic = "/img/acm.jpeg";
 			if (session.getAttribute("login")!=null){
 				String user_id = ""+session.getAttribute("login");
-				String que = "select * from photo";
+				//out.println(user_id);
+				String que = "select * from photo where user_id='"+user_id+"'";
 				dbConn conn = new dbConn();
-				conn.executeQuery(que);
-				ResultSet rs = conn.executeQuery("select * from temp where user_id='"+user_id+"'");
+				
+				ResultSet rs = conn.executeQuery(que);
+				
 				if (rs.next()) {
 					pic = "/img/avatar/"+rs.getString("name");
 				}
-		
+				//out.println(pic);
+			}
+			else {
+				pic = "/img/acm.jpeg";
 			}
 
 	if(session.getAttribute("login")==null) {
