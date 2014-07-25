@@ -19,16 +19,7 @@
 						<li>
 							<img class="icon" src="/img/arrow.png"/>		
 							<span class="fr user-gray">05-29 13:01</span>
-							<a href="">
-<% 
-	ResultSet rs = conn.executeQuery("select * from temp");
-	while (rs.next())
-	{
-		out.println("Test database already");
-		out.println(rs.getString("id"));
-		out.println(rs.getString("value"));
-	}
-%>
+							<a href="/forum/posts.jsp?id=8">Great Test!
 							</a>
 						</li>
 					</ul>

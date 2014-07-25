@@ -8,42 +8,42 @@
 	<div>
 		<legend id="addcontest">Add Contes</legend>
 	</div>
-	<form  action='' method='post'>
+	<form  action='getcontest.jsp' method='post'>
 	<div class="form-horizontal" id="form">
 		<div class="row-fluid" style="min-height:460px;">
 			<div class="span6">
 				<table class="table table-bordered thright" style="background:#f9f9f9;">
 					<tr>
 						<th>Title: </th>
-						<td><input id="Title" type="text" class="input-xlarge"></td>
+						<td><input id="Title" type="text" class="input-xlarge" name = "title"></td>
 					</tr>
 					<tr>
 						<th>Begin Time: </th>
 						<td>
-							<input id="datepicker" type="text" class="input-small" value="">
-							<input id="hour" maxlength="2" type="text" class="input-mini" value="0"> :
-							<input id="min" maxlength="2" type="text" class="input-mini" value="0"> : 00
+							<input id="datepicker" type="text" class="input-small" value="" name = "datepicker">
+							<input id="hour" maxlength="2" type="text" class="input-mini" value="0" name = "hour"> :
+							<input id="min" maxlength="2" type="text" class="input-mini" value="0" name = "min"> : 00
 						</td>
 					</tr>
 					<tr>
 						<th>Length: </th>
 						<td>
-							<input id="dd" maxlength="2" type="text" class="input-mini" value="0"> 天
-							<input id="hh" maxlength="2" type="text" class="input-mini" value="5"> :
-							<input id="mm" maxlength="2" type="text" class="input-mini" value="0"> : 00
+							<input id="dd" maxlength="2" type="text" class="input-mini" value="0" name = "dd"> 天
+							<input id="hh" maxlength="2" type="text" class="input-mini" value="5" name = "hh"> :
+							<input id="mm" maxlength="2" type="text" class="input-mini" value="0" name = "mm"> : 00
 						</td>
 					</tr>
 					<tr>
 						<th>Password: </th>
 						<td>
-							<input id="psw" type="password" class="input-large" ><br/>
+							<input id="psw" type="password" class="input-large" name = "psw" ><br/>
 							<span class="text-info">&nbsp;Leave blank to make it Public.</span>
 						</td>
 					</tr>
 					<tr>
 						<th>Description: </th>
 						<td>
-							<textarea id="desc" type="text" rows="5" class="input-xlarge"></textarea>
+							<textarea id="desc" type="text" rows="5" class="input-xlarge" name = "desc"></textarea>
 						</td>
 					</tr>
 					<tr>
@@ -54,7 +54,7 @@
 					</tr>
 				</table>
 			</div>
-			<% String test="asdf"; %>
+			
 <script type="text/javascript">
 var num = 1
 function delRow(obj) {
@@ -68,9 +68,12 @@ function delRow(obj) {
 		var x=document.getElementById('addprob').rows[i]
 		//alert(x.innerHTML);
 		var cl = x.cells[3];
+		var cxx = x.cells[1];
 		//alert(cl.innerHTML);
 		cl.innerHTML=i
+		cxx.innerHTML="<input type='text' class='probnum input-mini' value='' name = 'p"+i+"' />"
 	}
+	document.getElementById( 'num' ).value = num-1
 }
 function insRow() {
 	var x=document.getElementById('addprob').insertRow(num)
@@ -81,15 +84,21 @@ function insRow() {
 	var y4=x.insertCell(4)
 	
 	y0.innerHTML="<input type='button' href='' value='Delete' onclick='delRow(this)'/>"
-	y1.innerHTML="<input type='text' class='probnum input-mini' value=''/>"
+	y1.innerHTML="<input type='text' class='probnum input-mini' value='' name = 'p"+num+"' />"
 	y2.innerHTML="<input type='text' class='alias input-medium' value=''/>"
 	y3.innerHTML=num
+	<% 
+	String test="No Name";
+
+	%>
 	y4.innerHTML="<%=test%>"
 	num=num+1
+	document.getElementById( 'num' ).value = num-1
 }
 
 </script>
 			<div class="span6">
+			<input type=text name='num' id='num' value = 0 readonly="readonly" >
 				<table id="addprob" class="table table-condensed tdcenter">
 				<tr>
 					<th style="width:5%;">
@@ -103,6 +112,7 @@ function insRow() {
 				</table>
 			</div>
 		</div>
+		
 		<div class="form-actions">
 			<input type=submit value='submit'>
 		</div>

@@ -18,8 +18,8 @@
 					<%
 					int listid=0,totalnub=0;
 					if (request.getParameter("list")!=null) listid=Integer.parseInt(request.getParameter("list"));
-					//ResultSet rs = conn.executeQuery("select count(*) from contests");
-					//while(rs.next()) totalnub=Integer.parseInt(rs.getString(1));
+					ResultSet rs = conn.executeQuery("select count(*) from contests");
+					while(rs.next()) totalnub=Integer.parseInt(rs.getString(1));
 					for(int i=0;i<=totalnub/20;i++){
 						if (i!=listid) out.println("<li><a id="+(i+1)+" href='/contest/contest.jsp?list="+i+"'>"+(i+1)+"</a></li>");
 						else out.println("<li class='active'><a id="+(i+1)+" href='/contest/contest.jsp?list="+i+"'>"+(i+1)+"</a></li>");
@@ -50,21 +50,32 @@
 			<tbody>
 				<%
 					String que;
-					que = "select * from contests order by contest_id desc limit "+(listid*20)+",20";
-					//rs = conn.executeQuery(que);
+					que = "select * from contests order by id desc limit "+(listid*20)+",20";
+					rs = conn.executeQuery(que);
 					int line=1;
-					/*
+					
 					while(rs.next()){
 						if (line%2==1) out.println("<tr class='odd'>");
 						else out.println("<tr class='even'>");
-
+						out.println("<td>"+rs.getInt("id")+"</td>");
+						out.println("<td style='text-align:left;'><a href=''>"+rs.getString("name")+"</a></td>");
+						out.println("<td><div class='progress progress-striped active progress-success'><div class='bar'></div></div></td>");
+						out.println("<td>05:00:00</td>");
+						out.println("<td><span class='user-blue'>Public</span></td>");
+						out.println("<td><a class='user user-green' title='Specialist' href=''>root</a></td>");
 						out.println("</tr>");
 						line++;
 					}
 					rs.close();
-					*/
+					
 				%>
 			</tbody>
+			
+           
+           
+			
+            
+            
 		</table>
 	</div>
 </fieldset>
